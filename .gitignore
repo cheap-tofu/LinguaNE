@@ -1,0 +1,9 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Local secret keys
+.env
+
+# Temporary app audio
+temp_audio.mp3
