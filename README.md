@@ -1,23 +1,59 @@
-# 🗣️ NE India Multilingual AI Platform
 
-An advanced multimodal AI translation and linguistic mapping platform designed to preserve, translate, and analyze under-resourced indigenous languages of Northeast India.
+# LinguaNE: The Bodo Linguistic Engine 🌐
 
-## 🌟 Key Features
-* **Multimodal Input:** Translate typed text or use your microphone for real-time speech-to-text translation.
-* **Bilateral Translation:** Seamlessly convert between English and major regional indigenous languages (Bodo, Assamese, Khasi, Mizo, Garo, Manipuri/Meitei).
-* **Deep Linguistic Breakdown:** Automatically extracts sentence patterns (SOV/SVO), grammar rules, cultural context notes, and morpheme-by-morpheme lexical meanings.
-* **Pronunciation Assistant:** Generates automated phonetic audio pronunciations using text-to-speech technology.
-* **Robust Multi-Key Fallback Engine:** Built with a resilient API key rotation and 503-error retry loop to ensure high availability during live demonstrations and hackathons.
+**Multimodal AI translation and linguistic mapping for under-resourced indigenous languages of Northeast India.**
 
-## 🛠️ Tech Stack
-* **AI Engine:** Google Gemini (`gemini-3.6-flash` and `gemini-3.7-flash`) via the modern `google-genai` SDK.
-* **User Interface:** Gradio.
-* **Audio Processing:** gTTS (Google Text-to-Speech) & SpeechRecognition.
-* **Data Management:** Pandas.
+LinguaNE bypasses legacy statistical machine translation and traditional Speech-to-Text (STT) bottlenecks. By injecting raw audio directly into a multimodal AI brain, the platform performs deep morphological mapping, structural syntax breakdown, and cultural context extraction for languages facing digital extinction. 
 
-## 🚀 How to Run Locally
+Built initially as a robust proof-of-concept for **Bodo**, the architecture scales instantly to Assamese, Khasi, Mizo, Garo, and Manipuri with zero codebase alterations.
+
+## ✨ Core Innovations
+
+* **Direct Multimodal Injection:** Eliminates the hallucination loop of legacy STT engines by allowing the AI to process raw native voice bytes directly.
+* **Deep Linguistic Mapping:** Outputs forced JSON structures breaking down sentences into isolated morphemes, grammar logic, and SVO/SOV syntax patterns.
+* **Cultural Intelligence:** Maps cultural nuances and regional context alongside direct translations.
+* **Phonetic Accessibility:** Generates on-the-fly Roman transliterations and synthesizes localized audio pronunciations.
+
+## 🛠️ Technical Architecture & Resilience
+
+LinguaNE is engineered to survive the hostile networking environments of hackathons and rural deployments:
+
+* **Engine:** Google Gemini (3.6/3.7 Flash) via the modern `genai` SDK.
+* **Interface:** Gradio 6.0 featuring a custom `JetBrains Mono` and `Inter` dark-theme UI.
+* **Failover Protocol:** 
+  * **Auto-Key Rotation Pool:** Silently swaps API credentials in the background if a `429 Quota Exhausted` error is triggered.
+  * **ThreadPool Execution:** Implements strict 60-second timeouts to prevent UI hangs.
+  * **503 Interception:** Automatically retries and reroutes requests during server overloads.
+* **Deployment:** Integrated Cloudflare Tunneling bypasses local firewalls to generate secure, shareable public links instantly.
+
+## 🚀 Quick Start
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/ne-india-multilingual-ai.git](https://github.com/YOUR_USERNAME/ne-india-multilingual-ai.git)
-   cd ne-india-multilingual-ai
+   git clone [https://github.com/YOUR_USERNAME/LinguaNE.git](https://github.com/YOUR_USERNAME/LinguaNE.git)
+   cd LinguaNE
+
+2. **Install dependencies:**
+   ```bash
+   pip install -U gradio gtts pandas google-genai SpeechRecognition
+
+3. **Configure API Keys:**
+   Open the main Python file and insert your Google AI Studio keys into the `API_KEYS` pool.
+
+4. **Launch the engine:**
+   ```bash
+   python main.py
+
+
+*The application will automatically spin up a local Gradio server and initialize a Cloudflare tunnel for external access.*
+
+
+
+
+
+
+
+
+
+
+
