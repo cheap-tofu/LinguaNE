@@ -1,9 +1,24 @@
-# Python cache
+# Python standard
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
 
-# Local secret keys
+# Virtual Environments
+venv/
+.venv/
+env/
 .env
 
-# Temporary app audio
+# Project specific runtime files
 temp_audio.mp3
+cloudflared
+cloudflare.log
+
+# Jupyter/Colab
+.ipynb_checkpoints/
+
+# OS specific
+.DS_Store
+Thumbs.db
