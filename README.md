@@ -38,7 +38,7 @@ LinguaNE is engineered to survive the hostile networking environments of hackath
    pip install -U gradio gtts pandas google-genai SpeechRecognition
 
 3. **Configure API Keys:**
-   Open the main Python file and insert your Google AI Studio keys into the `API_KEYS` pool.
+   Open the main Python file and insert your Google AI Studio keys into the `YOUR_API_KEYS` pool.
 
 4. **Launch the engine:**
    ```bash
