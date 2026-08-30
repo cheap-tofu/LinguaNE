@@ -44,7 +44,6 @@ LinguaNE is engineered to survive the hostile networking environments of hackath
    ```bash
    python main.py
 
-
 *The application will automatically spin up a local Gradio server and initialize a Cloudflare tunnel for external access.*
 
 
