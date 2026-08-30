@@ -30,7 +30,7 @@ LinguaNE is engineered to survive the hostile networking environments of hackath
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/LinguaNE.git](https://github.com/YOUR_USERNAME/LinguaNE.git)
+   git clone [https://github.com/cheap-tofu/LinguaNE.git](https://github.com/cheap-tofu/LinguaNE.git)
    cd LinguaNE
 
 2. **Install dependencies:**
