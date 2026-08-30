@@ -15,8 +15,8 @@ import concurrent.futures
 gr.close_all()
 
 # 2. SETUP THE MULTI-KEY POOL
-API_KEYS = [
-    "YOUR_API_KEY_HERE"
+API_KEYS = [                                                       # insert your API keys here
+    "API_KEYS"
 ]
 active_key_index = 0
 
