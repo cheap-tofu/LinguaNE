@@ -1,4 +1,3 @@
-
 # LinguaNE: The Bodo Linguistic Engine 🌐
 
 **Multimodal AI translation and linguistic mapping for under-resourced indigenous languages of Northeast India.**
@@ -29,30 +28,35 @@ LinguaNE is engineered to survive the hostile networking environments of hackath
 ## 🚀 Quick Start
 
 1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/cheap-tofu/LinguaNE.git](https://github.com/cheap-tofu/LinguaNE.git)
+   
+```bash
+   git clone https://github.com/cheap-tofu/LinguaNE.git
    cd LinguaNE
+```
 
-2. **Install dependencies:**
-   ```bash
-   pip install -U gradio gtts pandas google-genai SpeechRecognition
+2. **Set up a Virtual Environment & Install Dependencies:**
+*To avoid system-wide package conflicts (PEP 668), it is highly recommended to use a virtual environment.*
+
+```bash
+   # Create the virtual environment
+   python -m venv venv
+
+   # Activate the virtual environment (Linux/macOS)
+   source venv/bin/activate
+   # (For Windows users, run: venv\Scripts\activate)
+
+   # Install the required packages
+   pip install -r requirements.txt
+```
 
 3. **Configure API Keys:**
-   Open the main Python file and insert your Google AI Studio keys into the `YOUR_API_KEYS` pool.
+Open `main.py` and insert your Google AI Studio keys into the `YOUR_API_KEYS` pool at the top of the file.
 
-4. **Launch the engine:**
-   ```bash
+5. **Launch the engine:**
+
+```bash
    python main.py
+```
 
-*The application will automatically spin up a local Gradio server and initialize a Cloudflare tunnel for external access.*
-
-
-
-
-
-
-
-
-
-
+*The application will automatically spin up a local Gradio server and initialize a Cloudflare tunnel for secure external access.*
 
